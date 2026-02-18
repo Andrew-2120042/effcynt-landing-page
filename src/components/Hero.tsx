@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
@@ -98,21 +98,7 @@ export const Hero: React.FC = () => {
                                 }}>
                                 Join Waitlist <ArrowRight size={20} />
                             </button>
-                            <button style={{
-                                background: 'transparent',
-                                color: 'black',
-                                padding: '1rem 2rem',
-                                borderRadius: '8px',
-                                fontSize: '1.1rem',
-                                fontWeight: 600,
-                                border: '1px solid #e5e7eb',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '0.5rem',
-                                cursor: 'pointer'
-                            }}>
-                                <Play size={20} /> Watch Demo
-                            </button>
+
                         </div>
 
                         <p style={{ marginTop: '1rem', fontSize: '1.1rem', fontWeight: 500, color: '#333' }}>

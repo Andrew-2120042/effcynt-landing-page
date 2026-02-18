@@ -1,7 +1,10 @@
 import { Check } from 'lucide-react';
 import React from 'react';
 
+import { useNavigate } from 'react-router-dom';
+
 const PricingCard = ({ title, price, subtitle, features, isPopular }: { title: string, price: string, subtitle: string, features: string[], isPopular?: boolean }) => {
+    const navigate = useNavigate();
     return (
         <div style={{
             padding: '2rem',
@@ -50,16 +53,19 @@ const PricingCard = ({ title, price, subtitle, features, isPopular }: { title: s
                 ))}
             </ul>
 
-            <button style={{
-                width: '100%',
-                padding: '0.75rem',
-                borderRadius: '0.5rem',
-                background: isPopular ? 'black' : 'white',
-                color: isPopular ? 'white' : 'black',
-                border: isPopular ? 'none' : '1px solid black',
-                fontWeight: 600,
-                marginTop: 'auto'
-            }}>
+            <button
+                onClick={() => navigate('/waitlist')}
+                style={{
+                    width: '100%',
+                    padding: '0.75rem',
+                    borderRadius: '0.5rem',
+                    background: isPopular ? 'black' : 'white',
+                    color: isPopular ? 'white' : 'black',
+                    border: isPopular ? 'none' : '1px solid black',
+                    fontWeight: 600,
+                    marginTop: 'auto',
+                    cursor: 'pointer'
+                }}>
                 Join Waitlist
             </button>
         </div>

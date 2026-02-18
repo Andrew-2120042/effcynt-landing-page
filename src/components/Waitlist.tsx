@@ -12,6 +12,7 @@ export const Waitlist: React.FC = () => {
     const [waitlistCount, setWaitlistCount] = useState<number | null>(null);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         const fetchCount = async () => {
             try {
                 const { count, error } = await supabase
